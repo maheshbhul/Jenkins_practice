@@ -1,10 +1,9 @@
 pipeline {
-    agent
+    agent any
 
     tools {
-            maven 'Maven-3'
-        }
-
+        maven 'Maven-3'
+    }
 
     stages {
 
@@ -19,6 +18,5 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-
     }
 }
