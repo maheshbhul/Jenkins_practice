@@ -27,4 +27,16 @@ pipeline{
 
         }
     }
+    post{
+        success{
+                echo 'Pipeline completed successfully!'
+
+        }
+        failure{
+                echo 'pipeline failed!'
+        }
+        alwyas{
+                echo 'Pipeline execution completed'
+        }
+    }
 }
