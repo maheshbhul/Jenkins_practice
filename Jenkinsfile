@@ -35,7 +35,7 @@ pipeline{
         failure{
                 echo 'pipeline failed!'
         }
-        alwyas{
+        always{
                 echo 'Pipeline execution completed'
         }
     }
