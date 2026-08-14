@@ -1,0 +1,29 @@
+[33mcommit 066ba96a50f63006d30739baf89a4807f0ab5b6e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: maheshbhul <azmaheshkumar@gmail.com>
+Date:   Fri Aug 14 20:09:03 2026 +0530
+
+    Test jenkins triggers
+
+[33mcommit 9f4598f9fc2091524950e75192b77e60f292c8f7[m
+Author: maheshbhul <azmaheshkumar@gmail.com>
+Date:   Fri Aug 7 21:07:13 2026 +0530
+
+    modified script
+
+[33mcommit 9575164931570befed62cc1a58cbd2b332cd2d5d[m
+Author: maheshbhul <azmaheshkumar@gmail.com>
+Date:   Fri Aug 7 21:04:45 2026 +0530
+
+    Configure Maven tool in pipeline
+
+[33mcommit 1b9b8b851888a27d56d8f4af225491bd6a635d79[m
+Author: maheshbhul <azmaheshkumar@gmail.com>
+Date:   Fri Aug 7 20:58:36 2026 +0530
+
+    Add Jenkins pipeline
+
+[33mcommit cc6571ed90c42360223349bf2abbb91eee5c5e77[m
+Author: maheshbhul <azmaheshkumar@gmail.com>
+Date:   Fri Aug 7 20:45:22 2026 +0530
+
+    First commit

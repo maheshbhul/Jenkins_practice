@@ -1,22 +1,30 @@
-pipeline {
+pipeline{
     agent any
-
-    tools {
+    tools{
         maven 'Maven-3'
     }
-
-    stages {
-
-        stage('Clone') {
-            steps {
-                echo 'Project already cloned by Jenkins'
+    stages{
+        stage('Checkout'){
+            steps{
+                echo 'Source code checkout complicated'
             }
         }
+        stage('Build'){
+            steps{
+                sh 'mvn clean compile'
 
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
             }
+        }
+        stage('Test'){
+            steps{
+                sh 'mvn test'
+            }
+        }
+        stage('Package'){
+            steps{
+                sh 'mvn package -DskipTests'
+            }
+
         }
     }
 }
