@@ -39,6 +39,19 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
+        stage('Credentials test'){
+            steps{
+                WithCredentials([
+                        usernamePassword(
+                                credentialsId:'demo-credential',
+                                usernameVariable:'USERNAME',
+                                passwordVariable:'PASSWORD'
+                        )
+                ]){
+                    sh 'echo "username is: $USERNAME"'
+                }
+            }
+        }
     }
 
     post {
