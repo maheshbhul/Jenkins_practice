@@ -22,6 +22,20 @@ pipeline {
             }
         }
 
+        stage('Credentials Test') {
+            steps {
+                withCredentials([
+                        usernamePassword(
+                                credentialsId: 'demo-credential',
+                                usernameVariable: 'USERNAME',
+                                passwordVariable: 'PASSWORD'
+                        )
+                ]) {
+                    sh 'echo "username is: $USERNAME"'
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'mvn clean compile'
@@ -37,19 +51,6 @@ pipeline {
         stage('Package') {
             steps {
                 sh 'mvn package -DskipTests'
-            }
-        }
-        stage('Credentials test'){
-            steps{
-                WithCredentials([
-                        usernamePassword(
-                                credentialsId:'demo-credential',
-                                usernameVariable:'USERNAME',
-                                passwordVariable:'PASSWORD'
-                        )
-                ]){
-                    sh 'echo "username is: $USERNAME"'
-                }
             }
         }
     }
